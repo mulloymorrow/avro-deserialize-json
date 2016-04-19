@@ -1,5 +1,6 @@
 import com.example.User;
 import com.google.common.io.Resources;
+import org.apache.avro.AvroTypeException;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericDatumWriter;
 import org.apache.avro.generic.GenericRecord;
@@ -59,16 +60,17 @@ public class AvroJsonDeserializeTest {
     }
 
 
-    @Test
-    public void decodeBuggyData() throws Exception {
+    @Test(expected = AvroTypeException.class)
+    public void decodeBuggyDataWithAvro() throws Exception {
         final URL resource = Resources.getResource("test.buggy.users.jsonroots");
         assertThat(resource).isNotNull();
         try (InputStream inputStream = resource.openStream()) {
-            System.out.println("inputStream = " + inputStream);
             Decoder decoder = DecoderFactory.get().jsonDecoder(schema, inputStream);
             ReflectDatumReader<User> rdr = new ReflectDatumReader<>(User.class);
             User joeClone = rdr.read(null, decoder);
             assertEquals(bob, joeClone.getName());
         }
     }
+
+
 }
