@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.avro:avro:1.8.0.24p-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.8.0.24p-SNAPSHOT/avro-1.8.0.24p-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.8.0.24p-SNAPSHOT/avro-1.8.0.24p-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.8.0.24p-SNAPSHOT/avro-1.8.0.24p-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
