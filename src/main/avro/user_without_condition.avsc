@@ -1,7 +1,7 @@
 {
   "type": "record",
-  "name": "User",
-  "namespace":"com.example",
+  "name": "UserPrime",
+  "namespace": "com.example",
   "doc": "user schema",
   "fields": [
     {
@@ -11,7 +11,10 @@
     },
     {
       "name": "user_id",
-      "type": ["null", "long"],
+      "type": [
+        "null",
+        "long"
+      ],
       "doc": "User's unique id"
     }
   ]

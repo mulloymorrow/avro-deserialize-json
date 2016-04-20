@@ -1,4 +1,5 @@
 import com.example.User;
+import com.example.item_conditions;
 import com.google.common.io.Resources;
 import org.apache.avro.AvroTypeException;
 import org.apache.avro.Schema;
@@ -36,6 +37,7 @@ public class AvroJsonDeserializeTest {
         builder.setUserId(bob_user_id);
         bob = "bob";
         builder.setName(bob);
+        builder.setItemCondition(item_conditions.open_box);
         user = builder.build();
     }
 
